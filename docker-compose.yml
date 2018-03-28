@@ -57,6 +57,27 @@ services:
             RPC_PASSWORD: this-is-insecure-change-it
             RPC_ALLOW_IP: 0.0.0.0/0.0.0.0
             MASTER_NODE: masternode
+        ports:
+            - "2750:2750" 
+        links:
+            - masternode
+        depends_on:
+            - masternode
+    multichain-web-demo:
+        build:
+            context: ./multichain-web-demo
+            args: 
+              CHAINNAME: "MyChain"
+              RPC_PORT: 8002
+              RPC_USER: "multichainrpc"
+              RPC_PASSWORD: "this-is-insecure-change-it"
+              MASTER_NODE: "masternode"
+        stdin_open: true
+        tty: true
+        expose:
+            - 80
+        ports:
+            - "8080:80" 
         links:
             - masternode
         depends_on:

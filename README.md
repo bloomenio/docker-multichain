@@ -26,6 +26,6 @@ Accessible through port 8080 (http://localhost:8080)
 
 ### Multichain explorer
 
-Accessible through port 2750 (http://localhost:2750)
+Accessible through port 2750 (http://localhost:2750/chains)
  
 

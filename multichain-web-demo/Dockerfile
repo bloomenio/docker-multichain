@@ -13,6 +13,7 @@ RUN cd /var/www/html
 
 ADD index.html index.html
 
+
 RUN git clone https://github.com/worldline-spain/multichain-web-demo.git
 
 RUN echo "default.name="${CHAINNAME} >> /var/www/html/multichain-web-demo/config.txt

@@ -80,5 +80,7 @@ services:
             - "8080:80" 
         links:
             - masternode
+            - explorernode
         depends_on:
             - masternode
+            - explorernode
